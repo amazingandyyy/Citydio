@@ -8,5 +8,6 @@ router.get('/', (req, res) => {
   var indexPath = path.join(__dirname, '../views/index.html');
   res.sendFile(indexPath);
 });
+router.use('/api', require('./api'));
 
 module.exports = router;

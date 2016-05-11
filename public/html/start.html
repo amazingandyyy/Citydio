@@ -1,1 +1,24 @@
-<p>start</p>
+<div class="container text-center">
+    <!-- <br> -->
+    <!-- <br> -->
+    <button ng-click="geoFindMe()" type="button" class="btn btn-primary">
+        <i class="fa fa-thumb-tack"></i>
+        <br>Get coordinate
+    </button>
+    <!-- <br /> -->
+    <!-- <br /> -->
+    <!-- <br /> -->
+
+    <small ng-if="loading">
+        <br>
+        <br>
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+    </small>
+
+    <div ng-if="coordinate.longitude">
+        <br>
+        <br>
+        <p>latitude: {{coordinate.latitude}}</p>
+        <p>longitude: {{coordinate.longitude}}</p>
+    </div>
+</div>

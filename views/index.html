@@ -6,21 +6,23 @@
         Citydio
     </title>
     <link rel='stylesheet' href='/css/style.css' />
-    <link rel="stylesheet" href="/bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
 
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="/bower_components/animate.css/animate.min.css"></script>
+    <!-- <script src="/bower_components/animate.css/animate.min.css"></script> -->
 
 </head>
 
 <body ng-app="CitydioApp" >
 <div class="container text-center">
-    <h1>Citydio</h1>
-<button type="button" class="btn btn-primary" ui-sref="home">Home</button>
-<button type="button" class="btn btn-primary" ui-sref="start">Start</button>
+    <h3>Citydio</h3>
+    <ul class="pager">
+   <li><a ui-sref="home">Home</a></li>
+   <li><a ui-sref="start">Start</a></li>
+ </ul>
 </div>
 <hr>
 <div class="container">
