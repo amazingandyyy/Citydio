@@ -1,0 +1,23 @@
+{
+  "name": "Citydio",
+  "description": "",
+  "main": "",
+  "authors": [
+    "amazingandyyy <amazingandyyy@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/amazingandyyy/Citydio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "font-awesome": "^4.6.2",
+    "animate.css": "^3.5.1",
+    "angular-ui-router": "^0.2.18"
+  }
+}
