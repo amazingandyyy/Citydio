@@ -26,6 +26,7 @@ app.controller('startCtrl', function($q, $http, $scope, $timeout, pitneyBowes) {
                 console.log(latitude, longitude);
                 pitneyBowes.getAddress(latitude, longitude)
             }
+            testing
             // pitneyBowes.getAddress(latitude,longitude);
         })
     }
