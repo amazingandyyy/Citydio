@@ -18,6 +18,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: '/html/start.html',
       controller: 'startCtrl'
     })
+    .state('photo', {
+      url: '/photo',
+      templateUrl: '/html/photo.html',
+      controller: 'photoCtrl'
+    })
 
   $urlRouterProvider.otherwise('/');
 });
