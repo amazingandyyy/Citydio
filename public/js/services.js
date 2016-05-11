@@ -11,4 +11,10 @@ app.service('pitneyBowes', function($http) {
             url: `/api/getaddress/${latitude}/${longitude}`
         });
     }
+    this.getDemographics = (latitude, longitude) => {
+        return $http({
+            method: 'GET',
+            url: `/api/getdemographics/${latitude}/${longitude}`
+        });
+    }
 });

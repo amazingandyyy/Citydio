@@ -1,9 +1,9 @@
 <div class="container text-center">
     <!-- <br> -->
     <!-- <br> -->
-    <button ng-click="geoFindMe()" type="button" class="btn btn-primary">
+    <button ng-click="getDemographics()" type="button" class="btn btn-primary">
         <i class="fa fa-thumb-tack"></i>
-        <br>Get coordinate
+        <br>Get getDemographics
     </button>
     <!-- <br /> -->
     <!-- <br /> -->
@@ -18,7 +18,15 @@
     <div ng-if="coordinate.longitude">
         <br>
         <br>
-        <p>latitude: {{coordinate.latitude}}</p>
-        <p>longitude: {{coordinate.longitude}}</p>
+        <p>latitude: {{coordinate.latitude}} - longitude: {{coordinate.longitude}}</p>
+        <div class="col-sm-6"><pre><h2>genderTheme</h2>{{demographicsData.themes.genderTheme.individualValueVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>incomeTheme</h2>{{demographicsData.themes.incomeTheme.rangeVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>raceTheme</h2>{{demographicsData.themes.raceTheme.rangeVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>ethnicityTheme</h2>{{demographicsData.themes.ethnicityTheme.individualValueVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>maritalStatusTheme</h2>{{demographicsData.themes.maritalStatusTheme.rangeVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>automobileTheme</h2>{{demographicsData.themes.automobileTheme.rangeVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>purchasingBehaviorTheme</h2>{{demographicsData.themes.purchasingBehaviorTheme.individualValueVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>educationalAttainmentTheme</h2>{{demographicsData.themes.educationalAttainmentTheme.rangeVariable | json }}</pre></div>
+        <div class="col-sm-6"><pre><h2>commuterPatternsTheme</h2>{{demographicsData.themes.commuterPatternsTheme.rangeVariable | json }}</pre></div>
     </div>
 </div>

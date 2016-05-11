@@ -7,10 +7,10 @@ app.controller('homeCtrl', function() {
 });
 app.controller('startCtrl', function($q, $http, $scope, $timeout, pitneyBowes) {
     var initializing = true
-    console.log('startCtrl');
+    console.log('photoCtrl');
     $scope.loading = false;
     $scope.coordinate = {};
-    $scope.geoFindMe = () => {
+    $scope.getDemographics = () => {
         $scope.loading = true;
         navigator.geolocation.getCurrentPosition((position) => {
             $scope.loading = false;
@@ -24,9 +24,13 @@ app.controller('startCtrl', function($q, $http, $scope, $timeout, pitneyBowes) {
             if (position) {
                 console.log('make the pitneyBowes request');
                 console.log(latitude, longitude);
-                pitneyBowes.getAddress(latitude, longitude)
+                pitneyBowes.getDemographics(latitude, longitude).then(function(res) {
+                    console.log(res);
+                    $scope.demographicsData = res.data;
+                }, function(err) {
+                    console.log('location not found.');
+                });
             }
-            // pitneyBowes.getAddress(latitude,longitude);
         })
     }
 });
@@ -49,7 +53,11 @@ app.controller('photoCtrl', function($q, $http, $scope, $timeout, pitneyBowes) {
             if (position) {
                 console.log('make the pitneyBowes request');
                 console.log(latitude, longitude);
-                pitneyBowes.getAddress(latitude, longitude)
+                pitneyBowes.getDemographics(latitude, longitude).then(function(res) {
+                    console.log(res);
+                }, function(err) {
+                    console.log('location not found.');
+                });
             }
         })
     }
@@ -69,7 +77,7 @@ app.controller('photoCtrl', function($q, $http, $scope, $timeout, pitneyBowes) {
             // $scope.$apply(function() {
             //     $scope.photo.one = photoOne; madavi
             // });
-        },(err) => {
+        }, (err) => {
             console.log('errrr: ', err);
         });
     }
