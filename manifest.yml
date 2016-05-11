@@ -1,0 +1,6 @@
+---
+applications:
+    - name: Citydio
+      memory: 1G
+      stack: cflinuxfs2
+      buildpack: predix_openresty_buildpack
