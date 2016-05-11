@@ -7,6 +7,8 @@
     </title>
     <link rel='stylesheet' href='/css/style.css' />
     <link rel="stylesheet" href="/bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
     <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -14,13 +16,16 @@
 
 </head>
 
-<body>
+<body ng-app="CitydioApp" >
+<div class="container text-center">
     <h1>Citydio</h1>
-
-
-
-
-
+<button type="button" class="btn btn-primary" ui-sref="home">Home</button>
+<button type="button" class="btn btn-primary" ui-sref="start">Start</button>
+</div>
+<hr>
+<div class="container">
+    <ui-view></ui-view>
+</div>
     <script src="../js/module.js"></script>
     <script src="../js/controllers.js"></script>
     <script src="../js/services.js"></script>
