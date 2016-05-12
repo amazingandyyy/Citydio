@@ -1,6 +1,7 @@
 <div class="container text-center">
     <!-- <br> -->
     <!-- <br> -->
+    <h3>Demographics</h3><br>
     <button ng-click="getDemographics()" type="button" class="btn btn-primary">
         <i class="fa fa-thumb-tack"></i>
         <br>Get getDemographics
@@ -19,6 +20,8 @@
         <br>
         <br>
         <p>latitude: {{coordinate.latitude}} - longitude: {{coordinate.longitude}}</p>
+        <div class="col-sm-12"><pre>{{demographicsData}}</pre></div>
+
         <div class="col-sm-6"><pre><h2>genderTheme</h2>{{demographicsData.themes.genderTheme.individualValueVariable | json }}</pre></div>
         <div class="col-sm-6"><pre><h2>incomeTheme</h2>{{demographicsData.themes.incomeTheme.rangeVariable | json }}</pre></div>
         <div class="col-sm-6"><pre><h2>raceTheme</h2>{{demographicsData.themes.raceTheme.rangeVariable | json }}</pre></div>
